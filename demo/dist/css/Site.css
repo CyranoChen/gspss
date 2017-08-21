@@ -1,0 +1,16 @@
+﻿html, body, h1, h2, h3, h4, h5, h6 {
+    font-family: Microsoft YaHei !important;
+}
+
+.login-page {
+    overflow: hidden;
+    background: #2b4579 url("images/login-bg.png") no-repeat center top;
+}
+
+.box.box-in {
+  border-top-color: #0073b7;
+}
+
+.box.box-out {
+  border-top-color: #605ca8;
+}
