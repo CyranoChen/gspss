@@ -516,8 +516,7 @@ Meteogram.prototype.drawBlocksForWindArrows = function (chart) {
  * Get the title based on the XML data
  */
 Meteogram.prototype.getTitle = function () {
-    //return 'Meteogram for ' + this.xml.location.name + ', ' + this.xml.location.country;
-    return '';
+    return 'Meteogram for ' + this.xml.location.name + ', ' + this.xml.location.country;
 };
 
 /**
@@ -529,27 +528,25 @@ Meteogram.prototype.getChartOptions = function () {
     return {
         chart: {
             renderTo: this.container,
-            //marginBottom: 70,
-            //marginRight: 40,
-            //marginTop: 50,
+            marginBottom: 70,
+            marginRight: 40,
+            marginTop: 50,
             plotBorderWidth: 1,
-            width: 700,
+            width: 400,
             height: 310
         },
 
         title: {
-            text: '',
-            //text: this.getTitle(),
-            //align: 'left'
+            text: this.getTitle(),
+            align: 'left'
         },
 
         credits: {
-            text: '',
-            //text: 'Forecast from <a href="http://yr.no">yr.no</a>',
-            //href: this.xml.credit.link['@attributes'].url,
-            //position: {
-            //    x: -40
-            //}
+            text: 'Forecast from <a href="http://yr.no">yr.no</a>',
+            href: this.xml.credit.link['@attributes'].url,
+            position: {
+                x: -40
+            }
         },
 
         tooltip: {
@@ -562,7 +559,7 @@ Meteogram.prototype.getChartOptions = function () {
 
         xAxis: [{ // Bottom X axis
             type: 'datetime',
-            tickInterval: 2 * 36e5, // two hours
+            tickInterval: 1 * 36e5, // two hours
             minorTickInterval: 36e5, // one hour
             tickLength: 0,
             gridLineWidth: 1,
@@ -787,7 +784,7 @@ Meteogram.prototype.parseYrData = function () {
         to = to.replace(/-/g, '/').replace('T', ' ');
         to = Date.parse(to);
 
-        if (to > pointStart + 4 * 24 * 36e5) {
+        if (to > pointStart + 1 * 24 * 24e5) {
             return;
         }
 
@@ -847,6 +844,7 @@ if (!location.hash) {
     //place = 'United_States/California/San_Francisco';
     //place = 'United_States/Minnesota/Minneapolis';
     location.hash = 'https://www.yr.no/place/' + place + '/forecast_hour_by_hour.xml';
+
 }
 
 // Then get the XML file through Highcharts' jsonp provider, see
@@ -856,7 +854,7 @@ $.ajax({
     dataType: 'json',
     url: 'https://www.highcharts.com/samples/data/jsonp.php?url=' + location.hash.substr(1) + '&callback=?',
     success: function (xml) {
-        window.meteogram = new Meteogram(xml, 'container');
+        window.meteogram = new Meteogram(xml, 'weather-container');
     },
     error: Meteogram.prototype.error
 });
