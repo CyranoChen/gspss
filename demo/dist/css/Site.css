@@ -4,13 +4,18 @@
 
 .login-page {
     overflow: hidden;
-    background: #2b4579 url("images/login-bg.png") no-repeat center top;
+  background: #fff !important;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(1, #eee)) !important;
+  background: -ms-linear-gradient(bottom, #ccc, #eee) !important;
+  background: -moz-linear-gradient(center bottom, #ccc 0%, #eee 100%) !important;
+  background: -o-linear-gradient(#eee, #ccc) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee', endColorstr='#ccc', GradientType=0) !important;
 }
 
 .box.box-in {
-  border-top-color: #0073b7;
+    border-top-color: #0073b7;
 }
 
 .box.box-out {
-  border-top-color: #605ca8;
+    border-top-color: #605ca8;
 }
