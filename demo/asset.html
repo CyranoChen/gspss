@@ -38,7 +38,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
@@ -318,55 +318,59 @@
             <section class="content">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-green"><i class="fa fa-calendar-check-o"></i></span>
+                    <div class="col-md-4">
+                        <!-- Info Boxes Style 2 -->
+                        <div class="info-box bg-yellow">
+                            <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">安全运营</span>
-                                <span class="info-box-number">365天</span>
+                                <span class="info-box-text">资产登记数量</span>
+                                <span class="info-box-number">1,200,125</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                                <span class="progress-description">
+                                    50% Increase in 30 Days
+                                </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- /.info-box -->
+                        <div class="info-box bg-green">
+                            <span class="info-box-icon"><i class="ion ion-ios-heart-outline"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">设备完好率</span>
+                                <span class="info-box-number">92%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                                <span class="progress-description">
+                                    20% Increase in 30 Days
+                                </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-box bg-aqua">
+                            <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">计划维修数</span>
+                                <span class="info-box-number">921</span>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                                <span class="progress-description">
+                                    40% Increase in 30 Days
+                                </span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
                         <!-- /.info-box -->
                     </div>
-                    <!-- /.col -->
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-aqua"><i class="fa fa-check-square-o"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">隐患排查</span>
-                                <span class="info-box-number">41件</span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="fa fa-bell-o"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">安全事件</span>
-                                <span class="info-box-number">2件</span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-red"><i class="fa fa-exclamation-circle"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">严重事故</span>
-                                <span class="info-box-number">0件</span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                    <!-- /.col -->
                 </div>
+
                 <!-- /.row -->
 
                 <div class="row" style="margin: 2px">
@@ -385,7 +389,7 @@
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
                             <div class="row">
-                                <div class="col-md-9 col-sm-8">
+                                <div class="col-md-9">
                                     <div class="pad">
                                         <!-- Map will be created here -->
                                         <div id="map-container" style="height:400px;"></div>
@@ -395,28 +399,37 @@
                                     </div>
                                 </div>
                                 <!-- /.col -->
-                                <div class="col-md-3 col-sm-4">
-                                    <div class="pad box-pane-right bg-green" style="min-height: 280px">
+                                <div class="col-md-3">
+                                    <div class="pad box-pane-right bg-green" style="min-height: 350px">
                                         <div class="description-block margin-bottom">
-                                            <div class="sparkbar pad" data-color="#fff">90,70,90,70,75,80,70</div>
-                                            <h5 class="description-header">15个</h5>
-                                            <span class="description-text">行政区域</span>
+                                            <div class="sparkbar pad" data-color="#fff">90,70,90,70,75,80,70,90,70,90</div>
+                                            <h5 class="description-header">8个 <i class="fa fa-sort-down" style="cursor: pointer"></i> + 2个 <i class="fa fa-sort-down" style="cursor: pointer"></i></h5>
+                                            <span class="description-text">行政区 + 功能区</span>
                                         </div>
                                         <!-- /.description-block -->
                                         <div class="description-block margin-bottom">
-                                            <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
-                                            <h5 class="description-header">300个</h5>
-                                            <span class="description-text">场站数量</span>
+                                            <div class="sparkpie pad">3,3,22,1,2</div>
+                                            <h5 class="description-header">
+                                                门站 <i class="fa fa-sort-down" style="cursor: pointer"></i>：3
+                                            </h5>
+                                            <span class="description-text">
+                                                场站分类数量
+                                            </span>
                                         </div>
                                         <!-- /.description-block -->
                                         <div class="description-block">
                                             <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
-                                            <h5 class="description-header">350公里</h5>
-                                            <span class="description-text">管网长度</span>
+                                            <h5 class="description-header">352公里 | 72.5%</h5>
+                                            <span class="description-text">管网长度及覆盖率</span>
+                                        </div>
+                                        <!-- /.description-block -->
+                                        <div class="description-block">
+                                            <div class="sparkbar pad" data-color="#fff">43,50,50,70,61,60,63</div>
+                                            <h5 class="description-header">高压：14个, 次高压：65个<br />中压：11346个</h5>
+                                            <span class="description-text">阀门分类数量</span>
                                         </div>
                                         <!-- /.description-block -->
                                     </div>
-                                    <!-- /.box -->
                                 </div>
                                 <!-- /.col -->
                             </div>
@@ -430,10 +443,10 @@
                 <!-- Main row -->
                 <div class="row">
                     <!-- Left col -->
-                    <section class="col-lg-8 connectedSortable"></section>
+                    <section class="col-md-8 connectedSortable"></section>
                     <!-- /.Left col -->
                     <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                    <section class="col-lg-4 connectedSortable">
+                    <section class="col-md-4 connectedSortable">
                         <!-- Widget: user widget style 1 -->
                         <div class="box box-widget widget-user">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
@@ -442,7 +455,7 @@
                                 <h5 class="widget-user-desc">GIS</h5>
                             </div>
                             <div class="widget-user-image">
-                                <img class="img-circle" src="dist/img/user3-128x128.jpg" alt="User Avatar">
+                                <img class="img-circle" src="dist/img/map.png" alt="User Avatar">
                             </div>
                             <div class="box-footer">
                                 <div class="row">

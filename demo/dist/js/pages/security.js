@@ -19,7 +19,6 @@ $(function () {
     var color3 = '#90ed7d';
 
     bindChartGasIn();
-    bindChartGasOut();
 
     function bindChartGasIn() {
         var objMonth = document.getElementById("month");
@@ -100,86 +99,6 @@ $(function () {
         });
     }
 
-    function bindChartGasOut() {
-        var objMonth = document.getElementById("month");
-        var month = objMonth.options[objMonth.selectedIndex].text;
-        var objDay = document.getElementById("day");
-        var day = objDay.options[objDay.selectedIndex].text;
-
-        if (day !== "" && month === "") {
-            alert("请选择月份");
-            return;
-        } else if (month === "7月" && day === "1") {
-            x = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', "11:00", '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
-            plan = [3, 2, 1, 3, 4, 3, 3, 5, 6, 5, 4, 4, 3, 2, 1, 3, 4, 3, 3, 5, 6, 5, 4, 4];
-            exp = [2, 3, 5, 7, 6, 5, 3, 6, 4, 5, 3, 7, 2, 3, 5, 7, 6, 5, 3, 6, 4, 5, 3, 7];
-            act = [4, 3, 3, 9, 4, 4, 4, 5, 6, 7, 3, 3, 4, 3, 3, 9, 4, 4, 4, 5, 6, 7, 3, 3];
-            avg = [3, 2.67, 3, 6.33, 3.33, 4.12, 3.88, 4.23, 5.01, 4.65, 4.22, 3.95, 3, 2.67, 3, 6.33, 3.33, 4.12, 3.88, 4.23, 5.01, 4.65, 4.22, 3.95];
-            color1 = '#f7a35c';
-            color2 = '#8085e9';
-            color3 = '#f15c80';
-        } else if (day === "" && month === "7月") {
-            x = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
-            plan = [3, 2, 1, 3, 4, 3, 3, 5, 6, 5, 4, 4, 3, 2, 1, 3, 4, 3, 3, 5, 6, 5, 4, 4, 6, 5, 4, 4, 3, 2, 1];
-            exp = [2, 3, 5, 7, 6, 5, 3, 6, 4, 5, 3, 7, 2, 3, 5, 7, 6, 5, 3, 6, 4, 5, 3, 7, 5, 3, 7, 2, 3, 5, 7];
-            act = [4, 3, 3, 9, 4, 4, 4, 5, 6, 7, 3, 3, 4, 3, 3, 9, 4, 4, 4, 5, 6, 7, 3, 3, 4, 4, 5, 6, 7, 3, 3];
-            avg = [3, 2.67, 3, 6.33, 3.33, 4.12, 3.88, 4.23, 5.01, 4.65, 4.22, 3.95, 3, 2.67, 3, 6.33, 3.33, 4.12, 3.88, 4.23, 5.01, 4.65, 4.22, 3.95, 4.12, 3.88, 4.23, 5.01, 4.65, 4.22, 3.95];
-            color1 = '#e4d354';
-            color2 = '#8085e8';
-            color3 = '#8d4653';
-        }
-
-        $('#chart-gas-out').highcharts({
-            title: {
-                text: ''
-            },
-            xAxis: {
-                categories: x
-            },
-            credits: {
-                enabled: false
-            },
-            plotOptions: {
-            },
-            labels: {
-                items: [{
-                    html: '',
-                    style: {
-                        left: '100px',
-                        top: '18px',
-                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-                    }
-                }]
-            },
-            series: [{
-                type: 'column',
-                name: '计划值',
-                data: plan,
-                color: color1
-            }, {
-                type: 'column',
-                name: '预计值',
-                data: exp,
-                color: color2
-            }, {
-                type: 'column',
-                name: '实际值',
-                data: act,
-                color: color3
-            }, {
-                type: 'spline',
-                name: '平均值',
-                data: avg,
-                marker: {
-                    lineWidth: 2,
-                    lineColor: Highcharts.getOptions().colors[3],
-                    fillColor: 'white'
-                }
-            }]
-        });
-    }
-
-
     //-------------
     //- PIE CHART -
     //-------------
@@ -188,40 +107,28 @@ $(function () {
     var pieChart = new Chart(pieChartCanvas);
     var PieData = [
       {
-          value: 700,
-          color: "#f56954",
-          highlight: "#f56954",
-          label: "Chrome"
+          value: 2,
+          color: "#dd4b39",
+          highlight: "#ff543f",
+          label: "严重"
       },
       {
-          value: 500,
-          color: "#00a65a",
-          highlight: "#00a65a",
-          label: "IE"
+          value: 5,
+          color: "#ff851b",
+          highlight: "#ffb677",
+          label: "主要"
       },
       {
-          value: 400,
+          value: 4,
           color: "#f39c12",
-          highlight: "#f39c12",
-          label: "FireFox"
+          highlight: "#feec8a",
+          label: "警告"
       },
       {
-          value: 600,
-          color: "#00c0ef",
-          highlight: "#00c0ef",
-          label: "Safari"
-      },
-      {
-          value: 300,
-          color: "#3c8dbc",
-          highlight: "#3c8dbc",
-          label: "Opera"
-      },
-      {
-          value: 100,
-          color: "#d2d6de",
-          highlight: "#d2d6de",
-          label: "Navigator"
+          value: 6,
+          color: "#00a65a",
+          highlight: "#54e7a4",
+          label: "一般"
       }
     ];
     var pieOptions = {
@@ -230,7 +137,7 @@ $(function () {
         //String - The colour of each segment stroke
         segmentStrokeColor: "#fff",
         //Number - The width of each segment stroke
-        segmentStrokeWidth: 2,
+        segmentStrokeWidth: 3,
         //Number - The percentage of the chart that we cut out of the middle
         percentageInnerCutout: 50, // This is 0 for Pie charts
         //Number - Amount of animation steps

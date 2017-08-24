@@ -179,76 +179,98 @@ $(function () {
         });
     }
 
+    // Build the chart
+    // Make monochrome colors and set them as default for all pies
+    Highcharts.getOptions().plotOptions.pie.colors = ['#006bab', '#4bafeb'];
 
-    /*
- * DONUT CHART
- * -----------
- */
-
-    var donutDataIn = [
-      { label: "来源1", data: 30, color: "#3c8dbc" },
-      { label: "来源2", data: 20, color: "#0073b7" },
-      { label: "来源3", data: 50, color: "#00c0ef" }
-    ];
-
-    var donutDataOut = [
-        { label: "商用", data: 60, color: "#4c489d" },
-        { label: "民用", data: 35, color: "#605ca8" },
-        { label: "其他", data: 15, color: "#827ec3" }
-    ];
-
-    $.plot("#donut-chart-in", donutDataIn, {
-        series: {
+    Highcharts.chart('pie-chart-in', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: ''
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y}km<sup>3</sup> ({point.percentage:.1f}%)</b>'
+        },
+        plotOptions: {
             pie: {
-                show: true,
-                radius: 1,
-                innerRadius: 0.5,
-                label: {
-                    show: true,
-                    radius: 2 / 3,
-                    formatter: labelFormatter,
-                    threshold: 0.1
-                }
-
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    distance: -50
+                },
+                showInLegend: false
             }
         },
-        legend: {
-            show: false
-        }
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '大鹏气',
+                y: 1210
+            }, {
+                name: '西二气',
+                y: 2960,
+                sliced: true,
+                selected: true
+            }]
+        }]
     });
 
-    $.plot("#donut-chart-out", donutDataOut, {
-        series: {
-            pie: {
-                show: true,
-                radius: 1,
-                innerRadius: 0.5,
-                label: {
-                    show: true,
-                    radius: 2 / 3,
-                    formatter: labelFormatter,
-                    threshold: 0.1
-                }
+    // Build the chart
+    // Make monochrome colors and set them as default for all pies
+    Highcharts.getOptions().plotOptions.pie.colors = ['#56528b', '#8a87be', '#bdbbe7'];
 
+    Highcharts.chart('pie-chart-out', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: ''
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y}km<sup>3</sup> ({point.percentage:.1f}%)</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    distance: -50
+                },
+                showInLegend: false
             }
         },
-        legend: {
-            show: false
-        }
+        series: [{
+            name: '气量',
+            colorByPoint: true,
+            data: [{
+                name: '城市燃气',
+                y: 2690,
+                sliced: true,
+                selected: true
+            }, {
+                name: '钰湖电厂',
+                y: 620
+            }, {
+                name: '宝昌电厂',
+                y: 1590
+            }]
+        }]
     });
-
-    /*
-     * END DONUT CHART
-     */
-
-    /*
- * Custom Label formatter
- * ----------------------
- */
-    function labelFormatter(label, series) {
-        return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
-            + label
-            + "<br>"
-            + Math.round(series.percent) + "%</div>";
-    }
 });
