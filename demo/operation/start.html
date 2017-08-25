@@ -3,48 +3,81 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>深燃生产运营管理平台 V1</title>
+    <title>启动预案</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
-    <link rel="stylesheet" href="dist/css/Site.css">
+    <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="../dist/css/Site.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="../plugins/iCheck/all.css">
 
     <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="../plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <link rel="stylesheet" href="../plugins/morris/morris.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .color-palette {
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        .color-palette-set {
+            margin-bottom: 15px;
+        }
+
+        .color-palette span {
+            display: none;
+            font-size: 12px;
+        }
+
+        .color-palette:hover span {
+            display: block;
+        }
+
+        .color-palette-box h4 {
+            position: absolute;
+            top: 100%;
+            left: 25px;
+            margin-top: -40px;
+            color: #ffffff;
+            font-size: 12px;
+            display: block;
+            z-index: 7;
+        }
+    </style>
 </head>
-<body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
+<body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
-            <a href="dashboard.html" class="logo">
+            <a href="../dashboard.html" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>SG</b>-spss</span>
+                <span class="logo-mini"><b>G</b>spss</span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg"><b>深圳燃气集团</b></span>
             </a>
@@ -74,7 +107,7 @@
                                             <a href="#">
                                                 <div class="pull-left">
                                                     <!-- User Image -->
-                                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                    <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <!-- Message title and timestamp -->
                                                 <h4>
@@ -159,14 +192,14 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
-                                <img src="dist/img/szgas_logo.png" class="user-image" alt="User Image">
+                                <img src="../dist/img/szgas_logo.png" class="user-image" alt="User Image">
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs">系统管理员</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                     <p>
                                         Alexander Pierce - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -226,18 +259,18 @@
                 <ul class="sidebar-menu">
                     <li class="header">智能决策</li>
                     <!-- Optionally, you can add icons to the links -->
-                    <li class="treeview active">
-                        <a href="dashboard.html">
+                    <li class="treeview">
+                        <a href="../dashboard.html">
                             <i class="fa fa-dashboard"></i> <span>智能工作台</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="gas.html"><i class="fa fa-circle-o text-aqua"></i> 输供气</a></li>
-                            <li><a href="security.html"><i class="fa fa-circle-o text-red"></i> 安全事故</a></li>
-                            <li><a href="operation.html"><i class="fa fa-circle-o text-green"></i> 生产运营</a></li>
-                            <li class="active"><a href="asset.html"><i class="fa fa-circle-o text-orange"></i> 设备资产</a></li>
+                            <li><a href="../gas.html"><i class="fa fa-circle-o text-aqua"></i> 输供气</a></li>
+                            <li class="active"><a href="../security.html"><i class="fa fa-circle-o text-red"></i> 安全事故</a></li>
+                            <li><a href="../operation.html"><i class="fa fa-circle-o text-green"></i> 生产运营</a></li>
+                            <li><a href="../asset.html"><i class="fa fa-circle-o text-orange"></i> 设备资产</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -267,7 +300,7 @@
                     <!-- Optionally, you can add icons to the links -->
                     <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i> <span>气源管理</span></a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-calendar"></i> <span>生产调度</span></a></li>
-                    <li class="treeview">
+                    <li class="treeview active">
                         <a href="#">
                             <i class="glyphicon glyphicon-warning-sign"></i> <span>抢维修管理</span>
                             <span class="pull-right-container">
@@ -276,11 +309,11 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> 事故接警</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> 启动预案</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> 应急处置</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> 现场指挥</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> 事故总结</a></li>
+                            <li><a href="receive.html"><i class="fa fa-circle-o"></i> 事故接警</a></li>
+                            <li class="active"><a href="start.html"><i class="fa fa-circle-o"></i> 启动预案</a></li>
+                            <li><a href="handle.html"><i class="fa fa-circle-o"></i> 应急处置</a></li>
+                            <li><a href="monitor.html"><i class="fa fa-circle-o"></i> 现场指挥</a></li>
+                            <li><a href="record.html"><i class="fa fa-circle-o"></i> 事故总结</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="glyphicon glyphicon-tasks"></i> <span>运营维护</span></a></li>
@@ -302,244 +335,230 @@
         </aside>
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
+
+
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    智能气网工作台
+                    抢维修 启动预案
                     <small>2017年8月18日 星期五 10:51 | 天气 34/28℃ 多云 微风 空气质量 42(优)</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-                    <li>智能工作台</li>
-                    <li class="active">资产设备</li>
+                    <li>抢维修管理</li>
+                    <li class="active">启动预案</li>
                 </ol>
             </section>
+
             <!-- Main content -->
             <section class="content">
-                <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-md-4">
-                        <!-- Info Boxes Style 2 -->
-                        <div class="info-box bg-yellow">
-                            <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">资产登记数量</span>
-                                <span class="info-box-number">1,200,125</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 80%"></div>
-                                </div>
-                                <span class="progress-description">
-                                    50% Increase in 30 Days
-                                </span>
+                    <!-- Custom Tabs (Pulled to the right) -->
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs pull-right">
+                            <li><a href="#tab_4-2" data-toggle="tab">日常事务</a></li>
+                            <li class="active"><a href="#tab_3-2" data-toggle="tab">应急抢修</a></li>
+                            <li><a href="#tab_2-2" data-toggle="tab">气量管理</a></li>
+                            <li><a href="#tab_1-2" data-toggle="tab">生产调度</a></li>
+                            <li class="pull-left header"></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane" id="tab_1-2">
+                                生产调度
                             </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <!-- /.info-box -->
-                        <div class="info-box bg-green">
-                            <span class="info-box-icon"><i class="ion ion-ios-heart-outline"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">设备完好率</span>
-                                <span class="info-box-number">92%</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 90%"></div>
-                                </div>
-                                <span class="progress-description">
-                                    20% Increase in 30 Days
-                                </span>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_2-2">
+                                气量管理
                             </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info-box bg-aqua">
-                            <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">计划维修数</span>
-                                <span class="info-box-number">921</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 80%"></div>
-                                </div>
-                                <span class="progress-description">
-                                    40% Increase in 30 Days
-                                </span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                </div>
-
-                <!-- /.row -->
-
-                <div class="row" style="margin: 2px">
-                    <div class="box box-success">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">深圳市燃气管道 - 全网 - 管网完整性</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                                    <i class="fa fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-box-tool">
-                                    <i class="fa fa-map"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body no-padding">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="pad">
-                                        <!-- Map will be created here -->
-                                        <div id="map-container" style="height:450px;"></div>
-                                        <div style="height: 350px; overflow: hidden; display: none">
-                                            <img src="dist/img/sz-gis2.png" alt="gis" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.col -->
-                                <div class="col-md-3">
-                                    <div class="pad box-pane-right bg-green" style="min-height: 350px">
-                                        <div class="description-block margin-bottom">
-                                            <div class="sparkbar pad" data-color="#fff">90,70,90,70,75,80,70,90,70,90</div>
-                                            <h5 class="description-header">8个 <i class="fa fa-sort-down" style="cursor: pointer"></i> + 2个 <i class="fa fa-sort-down" style="cursor: pointer"></i></h5>
-                                            <span class="description-text">行政区 + 功能区</span>
-                                        </div>
-                                        <!-- /.description-block -->
-                                        <div class="description-block margin-bottom">
-                                            <div class="sparkpie pad">3,3,22,1,2</div>
-                                            <h5 class="description-header">
-                                                门站 <i class="fa fa-sort-down" style="cursor: pointer"></i>：3
-                                            </h5>
-                                            <span class="description-text">
-                                                场站分类数量
-                                            </span>
-                                        </div>
-                                        <!-- /.description-block -->
-                                        <div class="description-block">
-                                            <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
-                                            <h5 class="description-header">352公里 | 72.5%</h5>
-                                            <span class="description-text">管网长度及覆盖率</span>
-                                        </div>
-                                        <!-- /.description-block -->
-                                        <div class="description-block">
-                                            <div class="sparkbar pad" data-color="#fff">43,50,50,70,61,60,63</div>
-                                            <h5 class="description-header">高压：14个, 次高压：65个<br />中压：11346个</h5>
-                                            <span class="description-text">阀门分类数量</span>
-                                        </div>
-                                        <!-- /.description-block -->
-                                    </div>
-                                </div>
-                                <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.box-body -->
-                    </div>
-                    <!-- /.box -->
-                </div>
-
-                <!-- Main row -->
-                <div class="row">
-                    <!-- Left col -->
-                    <section class="col-md-8 connectedSortable">
-                        <div class="box box-solid bg-aqua-gradient">
-                            <div class="box-header">
-                                <i class="fa fa-th"></i>
-                                <h3 class="box-title">设备运营维保统计</h3>
-                                <div class="box-tools pull-right">
-                                    <button type="button" class="btn bg-aqua btn-sm" data-widget="collapse">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn bg-aqua btn-sm" data-widget="remove">
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="box-body border-radius-none">
-                                <div class="chart" id="line-chart" style="height: 220px;"></div>
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="box-footer no-border">
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane active" id="tab_3-2">
                                 <div class="row">
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                        <div class="knob-label">Mail-Orders</div>
+                                    <div class="col-md-8">
+                                        <div class="callout callout-warning">
+                                            <h4>香蜜湖1号靠近居民楼漏气严重</h4>
+
+                                            <p>报警时间: 2010年05月05日 22时49分</p>
+                                        </div>
+                                        <div class="box">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">当前选中的应急预案</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <table class="table table-bordered">
+                                                    <tr>
+                                                        <th style="width: 10px">#</th>
+                                                        <th>预案层级</th>
+                                                        <th>预案名称</th>
+                                                        <th style="width: 40px">进度</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>综合预案</td>
+                                                        <td>
+                                                            SGC/A-E-3.3-2011 生产安全事故综合应急预案
+                                                        </td>
+                                                        <td><span class="badge bg-red">55%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2.</td>
+                                                        <td>综合预案</td>
+                                                        <td>
+                                                            SGC/A-E-4-2015 天然气气源保障总体应急预案
+                                                        </td>
+                                                        <td><span class="badge bg-yellow">70%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3.</td>
+                                                        <td>专项应急预案</td>
+                                                        <td>
+                                                            SGCA-E-3.3-1-2015 天然气中压管线专项应急预案
+                                                        </td>
+                                                        <td><span class="badge bg-yellow">70%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="info-box">
+                                                                        <span class="info-box-icon bg-aqua">I</span>
+                                                                    </div>
+                                                                    <!-- /.info-box -->
+                                                                </div>
+                                                                <!-- /.col -->
+                                                                <div class="col-md-3">
+                                                                    <div class="info-box">
+                                                                        <span class="info-box-icon bg-green">II</span>
+                                                                    </div>
+                                                                    <!-- /.info-box -->
+                                                                </div>
+                                                                <!-- /.col -->
+                                                                <div class="col-md-3">
+                                                                    <div class="info-box">
+                                                                        <span class="info-box-icon bg-yellow">III</span>
+                                                                    </div>
+                                                                    <!-- /.info-box -->
+                                                                </div>
+                                                                <!-- /.col -->
+                                                                <div class="col-md-3">
+                                                                    <div class="info-box">
+                                                                        <span class="info-box-icon bg-red">IV</span>
+                                                                    </div>
+                                                                    <!-- /.info-box -->
+                                                                </div>
+                                                                <!-- /.col -->
+                                                            </div>
+                                                            <!-- /.row -->
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4.</td>
+                                                        <td>专项应急预案</td>
+                                                        <td>
+                                                            SGCA-E-3.3-3-2015 天然气门站、高次高压调压站燃气专项应急预案
+                                                        </td>
+                                                        <td><span class="badge bg-light-blue">30%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5.</td>
+                                                        <td>现场处置预案</td>
+                                                        <td>
+                                                            天然气（次）高压管线泄漏、火灾、爆炸等现场处置方案
+                                                        </td>
+                                                        <td><span class="badge bg-green">90%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6.</td>
+                                                        <td>现场处置预案</td>
+                                                        <td>
+                                                            SGCTD/A-E-3.1-2012 留仙洞高/次高调压站应急处置方案
+                                                        </td>
+                                                        <td><span class="badge bg-green">90%</span></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <!-- /.box-body -->
+                                            <!--<div class="box-footer clearfix">
+                                                <ul class="pagination pagination-sm no-margin pull-right">
+                                                    <li><a href="#">&laquo;</a></li>
+                                                    <li><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">&raquo;</a></li>
+                                                </ul>
+                                            </div>-->
+                                        </div>
+                                        <!-- /.box -->
+
                                     </div>
-                                    <!-- ./col -->
-                                    <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                                        <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                        <div class="knob-label">Online</div>
+                                    <!-- /.col -->
+                                    <div class="col-md-4">
+                                        <section class="content-header">
+                                            <table>
+                                                <tr>
+                                                    <td width="150px"></td>
+                                                    <td><button type="button" class="btn btn-block btn-primary">启动预案</button></td>
+                                                    <td width="20px">&nbsp;</td>
+                                                    <td><button type="button" class="btn btn-block btn-primary">发送信息</button></td>
+                                                </tr>
+                                            </table>
+                                        </section>
+                                        <div class="box box-solid">
+                                            <div class="box-header with-border">
+                                                <i class="fa  fa-users"></i>
+
+                                                <h3 class="box-title">人员名单</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <dl>
+                                                    <dt><i class="fa  fa-user"></i>&nbsp;&nbsp;应急总指挥</dt>
+                                                    <dd><input type="checkbox" class="minimal"> 陈秋雄（分管副总裁）</dd>
+                                                    <dd>&nbsp;&nbsp;</dd>
+                                                    <dt><i class="fa  fa-user"></i>&nbsp;&nbsp;调度中心</dt>
+                                                    <dd><input type="checkbox" class="minimal"> 叶全国（调度组长）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 张国栋（调度员）</dd>
+                                                    <dd>&nbsp;&nbsp;</dd>
+                                                    <dt><i class="fa  fa-user"></i>&nbsp;&nbsp;现场指挥</dt>
+                                                    <dd><input type="checkbox" class="minimal"> 龙新华（现场指挥组长）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 周青松（抢修队员）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 林德伟（抢修队员）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 谢合峻（抢修队员）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 杨志文（抢修队员）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 欧悦（抢修队员）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 曾彬（抢修队员）</dd>
+                                                    <dd><input type="checkbox" class="minimal"> 唐勇（抢修队员）</dd>
+                                                </dl>
+                                            </div>
+                                            <!-- /.box-body -->
+                                        </div>
+                                        <!-- /.box -->
                                     </div>
-                                    <!-- ./col -->
-                                    <div class="col-xs-4 text-center">
-                                        <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                        <div class="knob-label">In-Store</div>
-                                    </div>
-                                    <!-- ./col -->
                                 </div>
-                                <!-- /.row -->
                             </div>
-                            <!-- /.box-footer -->
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_4-2">
+                                日常事务
+                            </div>
+                            <!-- /.tab-pane -->
                         </div>
-                    </section>
-                    <!-- /.Left col -->
-                    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                    <section class="col-md-4 connectedSortable">
-                        <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user">
-                            <!-- Add the bg color to the header using any of the bg-* classes -->
-                            <div class="widget-user-header bg-black" style="background: url('dist/img/photo1.png') center center;">
-                                <h3 class="widget-user-username">管网定位与地理信息系统</h3>
-                                <h5 class="widget-user-desc">GIS</h5>
-                            </div>
-                            <div class="widget-user-image">
-                                <img class="img-circle" src="dist/img/map.png" alt="User Avatar">
-                            </div>
-                            <div class="box-footer">
-                                <div class="row">
-                                    <div class="col-sm-4 border-right">
-                                        <div class="description-block">
-                                            <h5 class="description-header">3,200</h5>
-                                            <span class="description-text">SALES</span>
-                                        </div>
-                                        <!-- /.description-block -->
-                                    </div>
-                                    <!-- /.col -->
-                                    <div class="col-sm-4 border-right">
-                                        <div class="description-block">
-                                            <h5 class="description-header">13,000</h5>
-                                            <span class="description-text">FOLLOWERS</span>
-                                        </div>
-                                        <!-- /.description-block -->
-                                    </div>
-                                    <!-- /.col -->
-                                    <div class="col-sm-4">
-                                        <div class="description-block">
-                                            <h5 class="description-header">35</h5>
-                                            <span class="description-text">PRODUCTS</span>
-                                        </div>
-                                        <!-- /.description-block -->
-                                    </div>
-                                    <!-- /.col -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                        </div>
-                        <!-- /.widget-user -->
-                    </section>
-                    <!-- right col -->
+                        <!-- /.tab-content -->
+                    </div>
+                    <!-- nav-tabs-custom -->
                 </div>
-                <!-- /.row (main row) -->
+
             </section>
-            <!-- /.content -->
+            <!-- /.col -->
         </div>
+
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <!-- To the right -->
             <div class="pull-right hidden-xs">
-                SG-spss Version 1.0.0
+                G-spss Version 1.0.0
             </div>
             <!-- Default to the left -->
             <strong>Copyright &copy; 2017 <a href="#">上海航天能源股份有限公司</a>.</strong> 版权所有
@@ -716,7 +735,7 @@
     </div>
     <!-- ./wrapper -->
     <!-- jQuery 2.2.3 -->
-    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -724,37 +743,43 @@
         $.widget.bridge('uibutton', $.ui.button);
     </script>
     <!-- Bootstrap 3.3.6 -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <!-- Morris.js charts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="plugins/morris/morris.min.js"></script>
+    <script src="../plugins/morris/morris.min.js"></script>
     <!-- Sparkline -->
-    <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="../plugins/sparkline/jquery.sparkline.min.js"></script>
     <!-- jvectormap -->
-    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
     <!-- jQuery Knob Chart -->
-    <script src="plugins/knob/jquery.knob.js"></script>
+    <script src="../plugins/knob/jquery.knob.js"></script>
     <!-- daterangepicker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
     <!-- datepicker -->
-    <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
     <!-- Bootstrap WYSIHTML5 -->
-    <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
     <!-- Slimscroll -->
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
-    <script src="plugins/fastclick/fastclick.js"></script>
+    <script src="../plugins/fastclick/fastclick.js"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js"></script>
+    <script src="../dist/js/app.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="../plugins/iCheck/icheck.min.js"></script>
+    <script>
+        //iCheck for checkbox and radio inputs
+        $(function () {
+            $('input[type="checkbox"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue'
+            });
+        });
+    </script>
 
-    <script src="https://img.hcharts.cn/highmaps/highmaps.js"></script>
-    <script src="https://img.hcharts.cn/highcharts/modules/drilldown.js"></script>
-
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/asset.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+    <script src="../dist/js/demo.js"></script>
+
 </body>
 </html>

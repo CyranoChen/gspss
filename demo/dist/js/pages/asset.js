@@ -9,27 +9,61 @@ $(function () {
 
     "use strict";
 
+    //-----------------
+    //- SPARKLINE BAR -
+    //-----------------
+    $('.sparkbar').each(function () {
+        var $this = $(this);
+        $this.sparkline('html', {
+            type: 'bar',
+            height: $this.data('height') ? $this.data('height') : '30',
+            barColor: $this.data('color')
+        });
+    });
+
+    $('.sparkpie').sparkline('html', { type: 'pie', height: '30' });
+
     /* jQueryKnob */
     $(".knob").knob();
 
-    //The Calender
-    $("#calendar").datepicker();
-
-
-    var x = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
-    var plan = [300, 200, 100, 300, 400, 300, 300, 500, 600, 500, 400, 400];
-    var exp = [200, 300, 500, 700, 600, 500, 300, 600, 0, 0, 0, 0];
-    var act = [400, 300, 300, 900, 400, 400, 400, 0, 0, 0, 0, 0];
-    var avg = [300, 267, 300, 633, 333, 412, 388, 423, 501, 465, .22, 395];
-    var color1 = '#7cb5ec';
-    var color2 = '#434348';
-    var color3 = '#90ed7d';
+    /* Morris.js Charts */
+    // Sales chart
+    var line = new Morris.Line({
+        element: 'line-chart',
+        resize: true,
+        data: [
+          { y: '2011 Q1', item1: 2666 },
+          { y: '2011 Q2', item1: 2778 },
+          { y: '2011 Q3', item1: 4912 },
+          { y: '2011 Q4', item1: 3767 },
+          { y: '2012 Q1', item1: 6810 },
+          { y: '2012 Q2', item1: 5670 },
+          { y: '2012 Q3', item1: 4820 },
+          { y: '2012 Q4', item1: 15073 },
+          { y: '2013 Q1', item1: 10687 },
+          { y: '2013 Q2', item1: 8432 }
+        ],
+        xkey: 'y',
+        ykeys: ['item1'],
+        labels: ['Item 1'],
+        lineColors: ['#efefef'],
+        lineWidth: 2,
+        hideHover: 'auto',
+        gridTextColor: "#fff",
+        gridStrokeWidth: 0.4,
+        pointSize: 4,
+        pointStrokeColors: ["#efefef"],
+        gridLineColor: "#efefef",
+        gridTextFamily: "Open Sans",
+        gridTextSize: 10
+    });
 
     Highcharts.setOptions({
         lang: {
             drillUpText: '< 返回 “{series.name}”'
         }
     });
+
     var map = null,
         geochina = 'https://data.jianshukeji.com/jsonp?filename=geochina/';
 
@@ -90,6 +124,9 @@ $(function () {
             },
             subtitle: {
                 text: ''
+            },
+            credits: {
+                enabled: false
             },
             mapNavigation: {
                 enabled: true,
